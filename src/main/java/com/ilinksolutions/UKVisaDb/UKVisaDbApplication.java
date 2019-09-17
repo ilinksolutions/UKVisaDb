@@ -4,11 +4,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class P2Application
+public class UKVisaDbApplication
 {
 	public static void main(String[] args)
 	{
-		SpringApplication.run(P2Application.class, args);
+		SpringApplication.run(UKVisaDbApplication.class, args);
 	}
 
 }

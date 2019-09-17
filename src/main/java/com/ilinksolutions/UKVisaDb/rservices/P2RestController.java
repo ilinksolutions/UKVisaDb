@@ -32,7 +32,7 @@ public class P2RestController
 	
 	@GetMapping("/serviceCheck")
 	public String serviceCheck() {
-		return "P2 Service is Running...";
+		return "UK Visa Service is Running...";
 	}
 	
     @GetMapping("/getmsg/{id}")

@@ -19,11 +19,7 @@ import com.ilinksolutions.UKVisaDb.domains.UKVisaMessage;
 import com.ilinksolutions.UKVisaDb.exceptions.ErrorCode;
 import com.ilinksolutions.UKVisaDb.exceptions.USCISException;
 
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
-
 @RestController
-@Api(value="UK Visa Resource for Rest Endpoints.")
 public class UKVisaDbRestController
 {
 	private static final String ID_SHOULD_BE_IN_NUMBER_FORMAT = "ID should be in number format!";
@@ -34,13 +30,11 @@ public class UKVisaDbRestController
 	private static final String ENTITY_NOT_FOUND_FOR_ID = "Entity not found for id: ";
 	Logger logger = LoggerFactory.getLogger(UKVisaDbRestController.class);
 	
-	@ApiOperation(value="Return UK Visa Service is Running...")
 	@GetMapping("/serviceCheck")
 	public String serviceCheck() {
 		return "UK Visa Service is Running...";
 	}
 	
-	@ApiOperation(value="Return JSON object with person information.")
     @GetMapping("/getmsg/{id}")
     public ResponseEntity<UKVisaMessage> readEntry(@PathVariable String id) 
     {
@@ -69,7 +63,6 @@ public class UKVisaDbRestController
       }
     }
     
-	@ApiOperation(value="Save and return JSON object with person information.")
     @PostMapping("/savemsg")
     public ResponseEntity<UKVisaMessage> registerMessage(@RequestBody UKVisaMessage message)
     {
@@ -101,7 +94,6 @@ public class UKVisaDbRestController
     	}
     }
     
-	@ApiOperation(value="Update and return JSON object with person information.")
     @PutMapping("/updatemsg/{id}")
     public ResponseEntity<UKVisaMessage> update(@RequestBody UKVisaMessage message, @PathVariable int id)
     {

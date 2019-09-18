@@ -20,7 +20,7 @@ import com.ilinksolutions.UKVisaDb.exceptions.ErrorCode;
 import com.ilinksolutions.UKVisaDb.exceptions.USCISException;
 
 @RestController
-public class P2RestController
+public class UKVisaDbRestController
 {
 	private static final String ID_SHOULD_BE_IN_NUMBER_FORMAT = "ID should be in number format!";
 	private static final String MISSING_REQUIRED_FIELD_S = "Missing required field(s): ";
@@ -28,7 +28,7 @@ public class P2RestController
 	private static final String IS_NOT_A_VALID_EMAIL = " is not a valid Email.";
 	private static final String FAILED_TO_SAVE_THE_DATA_FOR = "Failed to save the data for: ";
 	private static final String ENTITY_NOT_FOUND_FOR_ID = "Entity not found for id: ";
-	Logger logger = LoggerFactory.getLogger(P2RestController.class);
+	Logger logger = LoggerFactory.getLogger(UKVisaDbRestController.class);
 	
 	@GetMapping("/serviceCheck")
 	public String serviceCheck() {

@@ -2,15 +2,22 @@ package com.ilinksolutions.UKVisaDb.domains;
 
 import java.io.Serializable;
 
+import io.swagger.annotations.ApiModelProperty;
+
 /**
  *
  */
 public class UKVisaMessage
 {
-    private int id;
+    @ApiModelProperty(notes="Record Id for the person.")
+	private int id;
+    @ApiModelProperty(notes="First name for the person.")
     private String firstName;
+    @ApiModelProperty(notes="Last name for the person.")
     private String lastName;
+    @ApiModelProperty(notes="Contact Number for the person.")
     private String contactNo;
+    @ApiModelProperty(notes="Email Address for the person.")
     private String email;
 
     public UKVisaMessage()

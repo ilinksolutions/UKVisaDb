@@ -19,7 +19,10 @@ import com.ilinksolutions.UKVisaDb.domains.UKVisaMessage;
 import com.ilinksolutions.UKVisaDb.exceptions.ErrorCode;
 import com.ilinksolutions.UKVisaDb.exceptions.USCISException;
 
+import io.swagger.annotations.Api;
+
 @RestController
+@Api(value="UK Visa DB Rest Test API")
 public class UKVisaDbRestController
 {
 	private static final String ID_SHOULD_BE_IN_NUMBER_FORMAT = "ID should be in number format!";

@@ -34,12 +34,13 @@ public class UKVisaDbRestController
 	private static final String ENTITY_NOT_FOUND_FOR_ID = "Entity not found for id: ";
 	Logger logger = LoggerFactory.getLogger(UKVisaDbRestController.class);
 	
-	@ApiOperation(value="Return UK Visa Service is Running...")
+	@ApiOperation(value="Returns UK Visa Service is Running...")
 	@GetMapping("/serviceCheck")
 	public String serviceCheck() {
 		return "UK Visa Service is Running...";
 	}
 	
+	@ApiOperation(value="Returns JSON Object with person information.")
     @GetMapping("/getmsg/{id}")
     public ResponseEntity<UKVisaMessage> readEntry(@PathVariable String id) 
     {
@@ -68,6 +69,7 @@ public class UKVisaDbRestController
       }
     }
     
+	@ApiOperation(value="Save person informaiton and returns JSON object.")
     @PostMapping("/savemsg")
     public ResponseEntity<UKVisaMessage> registerMessage(@RequestBody UKVisaMessage message)
     {
@@ -99,7 +101,8 @@ public class UKVisaDbRestController
     	}
     }
     
-    @PutMapping("/updatemsg/{id}")
+	@ApiOperation(value="Update person informaiton and returns JSON object.")
+	@PutMapping("/updatemsg/{id}")
     public ResponseEntity<UKVisaMessage> update(@RequestBody UKVisaMessage message, @PathVariable int id)
     {
     	String msg = (StringUtils.isBlank(message.getFirstName()) ? "firstName" : "");

@@ -20,6 +20,7 @@ import com.ilinksolutions.UKVisaDb.exceptions.ErrorCode;
 import com.ilinksolutions.UKVisaDb.exceptions.USCISException;
 
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 
 @RestController
 @Api(value="UK Visa DB Rest Test API")
@@ -33,6 +34,7 @@ public class UKVisaDbRestController
 	private static final String ENTITY_NOT_FOUND_FOR_ID = "Entity not found for id: ";
 	Logger logger = LoggerFactory.getLogger(UKVisaDbRestController.class);
 	
+	@ApiOperation(value="Return UK Visa Service is Running...")
 	@GetMapping("/serviceCheck")
 	public String serviceCheck() {
 		return "UK Visa Service is Running...";

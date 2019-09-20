@@ -5,6 +5,7 @@ import static springfox.documentation.builders.PathSelectors.regex;
 
 import org.springframework.context.annotation.Configuration;
 
+import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
@@ -20,25 +21,20 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.ilinksolutions.UKVisaDb.rservices"))
-                .paths(regex("/*"))
+                .paths(regex("/"))
                 .build()
                 .apiInfo(metaInfo());
     }
 
 	    private ApiInfo metaInfo() {
-
-	        ApiInfo apiInfo = new ApiInfo(
-	                "UK Visa API",
-	                "This API used for testing the UK Visa Rest APIs",
-	                "1.0",
-	                "Terms of Service",
-	                new Contact("I-Link Solutions, Inc.", "http://ilinksolution.com/",
-	                        "junaid.qureshi@ilinksolution.com"),
-	                "I-Link Solutions, Inc. License Version 2.0",
-	                "http://ilinksolution.com/", null
-	        );
-
-	        return apiInfo;
+	    	
+	        return new ApiInfoBuilder().title("Spring Boot REST API")
+	            .description("Employee Management REST API")
+	            .contact(new Contact("I-Link Solutions, Inc.",  "http://ilinksolution.com/", "junaid.qureshi@ilinksolution.com"))
+	            .license("I-Link Solutions, Inc. License Version 2.0")
+	            .licenseUrl("http://ilinksolution.com/")
+	            .version("1.0.0")
+	            .build();
 	    }
 	
 }

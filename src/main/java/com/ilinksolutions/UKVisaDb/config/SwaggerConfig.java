@@ -3,6 +3,8 @@ package com.ilinksolutions.UKVisaDb.config;
 
 import static springfox.documentation.builders.PathSelectors.regex;
 
+import java.util.Collections;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -37,7 +39,7 @@ public class SwaggerConfig {
 	                new Contact("I-Link Solutions, Inc.", "http://ilinksolution.com/",
 	                        "junaid.qureshi@ilinksolution.com"),
 	                "I-Link Solutions, Inc. License Version 2.0",
-	                "http://ilinksolution.com/", null
+	                "http://ilinksolution.com/", Collections.emptyList()
 	        );
 
 	        return apiInfo;

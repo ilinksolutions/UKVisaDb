@@ -34,7 +34,7 @@ public class SwaggerConfig {
 
 	        ApiInfo apiInfo = new ApiInfo(
 	                "UK Visa API",
-	                "This API used for testing the UK Visa Rest APIs",
+	                "This service is used for testing the UK Visa Rest APIs",
 	                "1.0",
 	                "Terms of Service",
 	                new Contact("I-Link Solutions, Inc.", "http://ilinksolution.com/",

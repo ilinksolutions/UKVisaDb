@@ -22,15 +22,15 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.ilinksolutions.UKVisaDb.rservices"))
-                .paths(regex("/"))
+                .paths(regex("/*"))
                 .build()
                 .apiInfo(metaInfo());
     }
 
 	    private ApiInfo metaInfo() {
 	    	
-	        return new ApiInfoBuilder().title("Spring Boot REST API")
-	            .description("Employee Management REST API")
+	        return new ApiInfoBuilder().title("UK Visa REST API")
+	            .description("This APIs used to save and update person data.")
 	            .contact(new Contact("I-Link Solutions, Inc.",  "http://ilinksolution.com/", "junaid.qureshi@ilinksolution.com"))
 	            .license("I-Link Solutions, Inc. License Version 2.0")
 	            .licenseUrl("http://ilinksolution.com/")

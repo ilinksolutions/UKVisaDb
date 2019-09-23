@@ -1,8 +1,6 @@
 package com.ilinksolutions.UKVisaDb.config;
 
 
-import static springfox.documentation.builders.PathSelectors.regex;
-
 import java.util.Collections;
 
 import org.springframework.context.annotation.Bean;
@@ -30,20 +28,20 @@ public class SwaggerConfig {
                 .apiInfo(metaInfo());
     }
 
-	    private ApiInfo metaInfo() {
+    private ApiInfo metaInfo() {
 
-	        ApiInfo apiInfo = new ApiInfo(
-	                "UK Visa API",
-	                "This service is used for testing the UK Visa Rest APIs",
-	                "1.0",
-	                "Terms of Service",
-	                new Contact("I-Link Solutions, Inc.", "http://ilinksolution.com/",
-	                        "junaid.qureshi@ilinksolution.com"),
-	                "I-Link Solutions, Inc. License Version 2.0",
-	                "http://ilinksolution.com/", Collections.emptyList()
-	        );
+        ApiInfo apiInfo = new ApiInfo(
+                "UK Visa API",
+                "This service is used for testing the UK Visa Rest APIs",
+                "1.0",
+                "Terms of Service",
+                new Contact("I-Link Solutions, Inc.", "http://ilinksolution.com/",
+                        "junaid.qureshi@ilinksolution.com"),
+                "I-Link Solutions, Inc. License Version 2.0",
+                "http://ilinksolution.com/", Collections.emptyList()
+        );
 
-	        return apiInfo;
-	    }
-	
+        return apiInfo;
+    }
+
 }

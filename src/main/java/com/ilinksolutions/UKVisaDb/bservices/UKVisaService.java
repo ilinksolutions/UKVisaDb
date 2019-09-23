@@ -62,7 +62,8 @@ public class UKVisaService
                     "\"lastName\": \"" + message.getLastName() + "\"," +
                     "\"contactNo\": \"" + message.getContactNo() + "\"," +
                     "\"email\": \"" + message.getEmail() + "\"}";
-            URL url = new URL("http://ilinkp2v17-ilinkp2v17.b9ad.pro-us-east-1.openshiftapps.com/p3m1/sendEmail");
+        //    URL url = new URL("http://ilinkp2v17-ilinkp2v17.b9ad.pro-us-east-1.openshiftapps.com/p3m1/sendEmail");
+            URL url = new URL("http://ilinkp2v17-ilinkp2v17.b9ad.pro-us-east-1.openshiftapps.com/UKVisaEmail/sendEmail");
             HttpURLConnection httpConnection = (HttpURLConnection) url.openConnection();
             httpConnection.setDoOutput(true);
             httpConnection.setRequestMethod("POST");

@@ -69,7 +69,7 @@ public class UKVisaDbRestController
       }
     }
     
-	@ApiOperation(value="Save person informaiton and returns JSON object.")
+	@ApiOperation(value="Saves person information and returns JSON object.")
     @PostMapping("/savemsg")
     public ResponseEntity<UKVisaMessage> registerMessage(@RequestBody UKVisaMessage message)
     {
@@ -101,7 +101,7 @@ public class UKVisaDbRestController
     	}
     }
     
-	@ApiOperation(value="Update person informaiton and returns JSON object.")
+	@ApiOperation(value="Updates person information and returns JSON object.")
 	@PutMapping("/updatemsg/{id}")
     public ResponseEntity<UKVisaMessage> update(@RequestBody UKVisaMessage message, @PathVariable int id)
     {

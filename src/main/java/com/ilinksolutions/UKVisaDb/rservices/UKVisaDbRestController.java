@@ -23,7 +23,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
-@Api(value="UK Visa DB Rest Test API", description="UK Visa DB Rest Test API", tags= {"UK Visa APIs"})
+@Api(value="UK Visa DB Rest Test API", tags= { "UK Visa DB Endpoints" })
 public class UKVisaDbRestController
 {
 	private static final String ID_SHOULD_BE_IN_NUMBER_FORMAT = "ID should be in number format!";
